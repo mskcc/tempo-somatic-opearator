@@ -1,0 +1,22 @@
+{
+    "pipeline": {
+        "pipeline_id": "aec9e770-e821-11f1-a2c9-a69087ab8fc9",
+        "pipeline_name": "Tempo Somatic",
+        "pipeline_link": "git@github.com:sivkovic/tempo.git",
+        "pipeline_version": "feature/voyager-iris-somatic",
+        "pipeline_entrypoint": "dsl2.nf",
+        "pipeline_format": 1,
+        "nfcore": false
+    },
+    "operator": {
+        "operator_id": null,
+        "operator_name": "",
+        "operator_version": "",
+        "class_name": "TempoSomatic",
+        "package_name": "tempo_somatic",
+        "args": [
+            "igoRequestId"
+        ],
+        "environment": {}
+    }
+}

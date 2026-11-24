@@ -1,0 +1,92 @@
+[
+    {
+        "id": "bamMapping",
+        "schema": {
+            "items": {
+                "fields": [
+                    {
+                        "name": "sample",
+                        "type": "string"
+                    },
+                    {
+                        "name": "target",
+                        "type": "string"
+                    },
+                    {
+                        "name": "bam",
+                        "type": "File"
+                    },
+                    {
+                        "name": "bai",
+                        "type": "File"
+                    }
+                ],
+                "type": "record"
+            },
+            "type": "array"
+        },
+        "template": "SAMPLE\tTARGET\tBAM\tBAI\n{{#bamMapping}}\n{{sample}}\t{{target}}\t{{bam}}\t{{bai}}\n{{/bamMapping}}"
+    },
+    {
+        "id": "pairing",
+        "schema": {
+            "items": {
+                "fields": [
+                    {
+                        "name": "tumor_id",
+                        "type": "string"
+                    },
+                    {
+                        "name": "normal_id",
+                        "type": "string"
+                    }
+                ],
+                "type": "record"
+            },
+            "type": "array"
+        },
+        "template": "NORMAL_ID\tTUMOR_ID\n{{#pairing}}\n{{normal_id}}\t{{tumor_id}}\n{{/pairing}}"
+    },
+    {
+        "id": "somatic",
+        "schema": {
+            "type": "bool"
+        }
+    },
+    {
+        "id": "aggregate",
+        "schema": {
+            "type": "bool"
+        }
+    },
+    {
+        "id": "assayType",
+        "schema": {
+            "type": "bool"
+        }
+    },
+    {
+        "id": "genome",
+        "schema": {
+            "type": "string"
+        }
+    },
+    {
+        "id": "workflows",
+        "schema": {
+            "type": "string"
+        }
+    },
+    {
+        "id": "anonymizeFQ",
+        "schema": {
+            "type": "string"
+        }
+    },
+    {
+        "id": "params.outname",
+        "schema": {
+            "type": "string"
+        }
+    }
+]
